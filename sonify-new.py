@@ -239,9 +239,6 @@ mon_son.instruments.append(cello)
 mon_son.write(path + pic[:pic.index('.')] + '-sonified.mid')
 
 
-
-
-
 fig, ax = plt.subplots()
 ax.imshow(mon, interpolation='nearest', cmap=plt.cm.gray)
 
