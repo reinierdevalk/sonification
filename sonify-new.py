@@ -1,5 +1,5 @@
 import os
-#from sys import argv
+from sys import argv
 import numpy as np
 import skimage
 from skimage import io
@@ -10,7 +10,7 @@ from skimage.morphology import skeletonize
 from collections import Counter
 import pretty_midi
 
-#script, path = argv
+script, path = argv
 
 # image 1007kunmondriaan.jpg
 # https://www.nrc.nl/nieuws/2014/07/10/zeeuws-nazomerlicht-betoverde-mondriaan-1397427-a1152239
@@ -24,7 +24,8 @@ import pretty_midi
 # http://craffel.github.io/pretty-midi/#module-pretty_midi
 
 # rows x cols = 1006 x 1280
-mondriaan = 'mondriaan.jpg'
+#mondriaan = 'mondriaan.jpg'
+pic = argv[1]
 # rows x cols = 104, 101
 #mondriaan = 'mondriaan-test.png'
 
@@ -33,7 +34,7 @@ mondriaan = 'mondriaan.jpg'
 #path = argv[1]
 path = ''
 
-file = os.path.join(path, mondriaan)
+file = os.path.join(path, pic)
 
 
 mon_col = io.imread(file)
@@ -234,10 +235,8 @@ for item in notes:
 mon_son.instruments.append(cello)
 
 # Write out the MIDI data
-mon_son.write(path + 'mondriaan-test-sonified.mid')
-
-
-
+#mon_son.write(path + 'mondriaan-test-sonified.mid')
+mon_son.write(path + pic[:pic.index('.')] + '-sonified.mid')
 
 
 fig, ax = plt.subplots()
