@@ -1,12 +1,15 @@
 # sonification
 
-To sonify a picture, do the following:
+To sonify an image, do the following:
 
 * Store the contents of this repository in a local folder. 
+
 * `cd` into the folder and execute the following command:
 
-    $ python sonify-new.py <pic_name>.*
+    `$ python sonify.py img/<img_name>.*`
     
-  where `<pic_name>.*` is the picture file (any extension will do). 
+  where `<img_name>.*` is the image file (any extension will do) stored in the `img` folder. 
 
-* The script will store a MIDI file called `<pic_name>-sonified.mid`. Enjoy...!
+* The script stores a MIDI file called `<pic_name>-sonified.mid` in the `out` folder. 
+
+
